@@ -25,4 +25,4 @@ Route::prefix('auth')->group(function () {
 });
 
 
-Route::post('/newMessage', 'App\Http\Controllers\MessageController@newMessage')->middleware('auth:sanctum')->name('newMessage');
+Route::post('/newMessage', 'App\Http\Controllers\MessageController@newMessage')->name('newMessage');
