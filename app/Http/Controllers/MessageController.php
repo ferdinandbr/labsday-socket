@@ -16,7 +16,8 @@ class MessageController extends Controller
       $data =  [
         'message' => $request->message,
         'userName' => $faker->name(),
-        'date' => Carbon::now()->format('d-m-Y H:i:s')
+        'date' => Carbon::now()->format('d-m-Y H:i:s'),
+        'color' => $faker->hexColor()
       ];
 
       event(new NewMessage($data));
